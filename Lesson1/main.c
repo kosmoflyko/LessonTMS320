@@ -9,8 +9,8 @@ void main(void) {
    InitPieCtrl();
    InitPieVectTable();
 
-   IER = 0x0000;
-   IFR = 0x0000;
+//   IER = 0x0000;
+//   IFR = 0x0000;
 
    InitLED();
 
