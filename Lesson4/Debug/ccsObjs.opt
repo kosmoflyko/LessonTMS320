@@ -1,0 +1,1 @@
+"./src/main.obj" "./src/systemInitStart.obj" "./src/system_src/F2802x_CodeStartBranch.obj" "./src/system_src/F2802x_DefaultIsr.obj" "./src/system_src/F2802x_GlobalVariableDefs.obj" "./src/system_src/F2802x_PieCtrl.obj" "./src/system_src/F2802x_PieVect.obj" "./src/system_src/F2802x_SysCtrl.obj" "../F28027.cmd" "../src/system_src/F2802x_Headers_nonBIOS.cmd" -llibc.a 
