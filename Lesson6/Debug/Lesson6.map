@@ -1,10 +1,10 @@
 ******************************************************************************
              TMS320C2000 Linker PC v16.9.6                     
 ******************************************************************************
->> Linked Mon Mar 05 12:33:34 2018
+>> Linked Sun Apr 01 12:17:29 2018
 
 OUTPUT FILE NAME:   <Lesson6.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 003f6396
+ENTRY POINT SYMBOL: "_c_int00"  address: 003f640f
 
 
 MEMORY CONFIGURATION
@@ -16,7 +16,7 @@ PAGE 0:
   OTP                   003d7800   00000400  00000000  00000400  RWIX
   FLASHD                003f0000   00002000  00000000  00002000  RWIX
   FLASHC                003f2000   00002000  00000000  00002000  RWIX
-  FLASHA                003f6000   00001f80  0000055d  00001a23  RWIX
+  FLASHA                003f6000   00001f80  00000583  000019fd  RWIX
   CSM_RSVD              003f7f80   00000076  00000000  00000076  RWIX
   BEGIN                 003f7ff6   00000002  00000002  00000000  RWIX
   CSM_PWL_P0            003f7ff8   00000008  00000000  00000008  RWIX
@@ -69,11 +69,11 @@ SECTION ALLOCATION MAP
  output                                  attributes/
 section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
-.cinit     0    003f6543    0000001a     
-                  003f6543    0000000e     rts2800_ml.lib : exit.obj (.cinit)
-                  003f6551    00000005                    : _lock.obj (.cinit:__lock)
-                  003f6556    00000005                    : _lock.obj (.cinit:__unlock)
-                  003f655b    00000002     --HOLE-- [fill = 0]
+.cinit     0    003f6569    0000001a     
+                  003f6569    0000000e     rts2800_ml.lib : exit.obj (.cinit)
+                  003f6577    00000005                    : _lock.obj (.cinit:__lock)
+                  003f657c    00000005                    : _lock.obj (.cinit:__unlock)
+                  003f6581    00000002     --HOLE-- [fill = 0]
 
 .pinit     0    003f6000    00000000     UNINITIALIZED
 
@@ -83,24 +83,24 @@ ramfuncs   0    00008000    00000000     UNINITIALIZED
                   003f6000    00000100     F2802x_PieVect.obj (.econst:_PieVectTableInit)
                   003f6100    00000011     main.obj (.econst:.string)
 
-.text      0    003f6111    00000432     
+.text      0    003f6111    00000458     
                   003f6111    00000128     F2802x_SysCtrl.obj (.text)
-                  003f6239    000000ff     F2802x_DefaultIsr.obj (.text:retain)
-                  003f6338    0000005e     systemInitStart.obj (.text)
-                  003f6396    00000054     rts2800_ml.lib : boot28.obj (.text)
-                  003f63ea    00000053     libUART.obj (.text)
-                  003f643d    00000029     rts2800_ml.lib : exit.obj (.text)
-                  003f6466    00000028     F2802x_PieCtrl.obj (.text)
-                  003f648e    00000026     F2802x_PieVect.obj (.text)
-                  003f64b4    00000024     rts2800_ml.lib : cpy_tbl.obj (.text)
-                  003f64d8    0000001d                    : memcpy.obj (.text)
-                  003f64f5    00000019                    : args_main.obj (.text)
-                  003f650e    00000013     systemInitStart.obj (.text:retain)
-                  003f6521    0000000e     main.obj (.text)
-                  003f652f    00000009     rts2800_ml.lib : _lock.obj (.text)
-                  003f6538    00000008     F2802x_CodeStartBranch.obj (.text)
-                  003f6540    00000002     rts2800_ml.lib : pre_init.obj (.text)
-                  003f6542    00000001                    : startup.obj (.text)
+                  003f6239    0000011b     F2802x_DefaultIsr.obj (.text:retain)
+                  003f6354    0000005e     systemInitStart.obj (.text)
+                  003f63b2    0000005d     libUART.obj (.text)
+                  003f640f    00000054     rts2800_ml.lib : boot28.obj (.text)
+                  003f6463    00000029                    : exit.obj (.text)
+                  003f648c    00000028     F2802x_PieCtrl.obj (.text)
+                  003f64b4    00000026     F2802x_PieVect.obj (.text)
+                  003f64da    00000024     rts2800_ml.lib : cpy_tbl.obj (.text)
+                  003f64fe    0000001d                    : memcpy.obj (.text)
+                  003f651b    00000019                    : args_main.obj (.text)
+                  003f6534    00000013     systemInitStart.obj (.text:retain)
+                  003f6547    0000000e     main.obj (.text)
+                  003f6555    00000009     rts2800_ml.lib : _lock.obj (.text)
+                  003f655e    00000008     F2802x_CodeStartBranch.obj (.text)
+                  003f6566    00000002     rts2800_ml.lib : pre_init.obj (.text)
+                  003f6568    00000001                    : startup.obj (.text)
 
 codestart 
 *          0    003f7ff6    00000002     
@@ -257,22 +257,22 @@ MODULE SUMMARY
        ------                          ----   ----------------   ------------------
     .\src\
        systemInitStart.obj             113    0                  0                 
-       libUART.obj                     83     0                  0                 
+       libUART.obj                     93     0                  0                 
        main.obj                        14     17                 0                 
     +--+-------------------------------+------+------------------+--------------------+
-       Total:                          210    17                 0                 
+       Total:                          220    17                 0                 
                                                                                    
     .\src\system_src\
        F2802x_GlobalVariableDefs.obj   0      0                  1022              
        F2802x_SysCtrl.obj              296    0                  0                 
        F2802x_PieVect.obj              38     256                0                 
-       F2802x_DefaultIsr.obj           255    0                  0                 
+       F2802x_DefaultIsr.obj           283    0                  0                 
        F2802x_PieCtrl.obj              40     0                  0                 
        F2802x_CodeStartBranch.obj      10     0                  0                 
     +--+-------------------------------+------+------------------+--------------------+
-       Total:                          639    256                1022              
+       Total:                          667    256                1022              
                                                                                    
-    C:\Program Files\TI CCS7\ccsv7\tools\compiler\ti-cgt-c2000_16.9.6.LTS\lib\rts2800_ml.lib
+    C:\Program Files\Texas Instruments\ccsv7\tools\compiler\ti-cgt-c2000_16.9.6.LTS\lib\rts2800_ml.lib
        boot28.obj                      84     0                  0                 
        exit.obj                        41     14                 6                 
        cpy_tbl.obj                     36     0                  0                 
@@ -286,7 +286,7 @@ MODULE SUMMARY
                                                                                    
        Stack:                          0      0                  768               
     +--+-------------------------------+------+------------------+--------------------+
-       Grand Total:                    1076   297                1800              
+       Grand Total:                    1114   297                1800              
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -364,15 +364,15 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                            
 ----  -------   ----                            
 abs   ffffffff  .text                           
-0     003f643d  C$$EXIT                         
+0     003f6463  C$$EXIT                         
 0     003f6298  _ADCINT1_ISR                    
 0     003f629d  _ADCINT2_ISR                    
-0     003f6306  _ADCINT3_ISR                    
-0     003f630b  _ADCINT4_ISR                    
-0     003f6310  _ADCINT5_ISR                    
-0     003f6315  _ADCINT6_ISR                    
-0     003f631a  _ADCINT7_ISR                    
-0     003f631f  _ADCINT8_ISR                    
+0     003f6322  _ADCINT3_ISR                    
+0     003f6327  _ADCINT4_ISR                    
+0     003f632c  _ADCINT5_ISR                    
+0     003f6331  _ADCINT6_ISR                    
+0     003f6336  _ADCINT7_ISR                    
+0     003f633b  _ADCINT8_ISR                    
 0     003f62ac  _ADCINT9_ISR                    
 1     00007100  _AdcRegs                        
 1     00000b00  _AdcResult                      
@@ -389,7 +389,7 @@ abs   ffffffff  .text
 0     003f6135  _DisableDog                     
 0     003f62e3  _ECAP1_INT_ISR                  
 1     00006a00  _ECap1Regs                      
-0     003f6329  _EMPTY_ISR                      
+0     003f6345  _EMPTY_ISR                      
 0     003f624d  _EMUINT_ISR                     
 0     003f62cf  _EPWM1_INT_ISR                  
 0     003f62bb  _EPWM1_TZINT_ISR                
@@ -405,7 +405,7 @@ abs   ffffffff  .text
 1     000068c0  _EPwm4Regs                      
 1     00000d01  _EmuBMode                       
 1     00000d00  _EmuKey                         
-0     003f6485  _EnableInterrupts               
+0     003f64ab  _EnableInterrupts               
 0     003f6223  _ExtOscSel                      
 1     00000a80  _FlashRegs                      
 1     00000d04  _Flash_CPUScaleFactor           
@@ -419,22 +419,22 @@ abs   ffffffff  .text
 0     003f6257  _ILLEGAL_ISR                    
 0     003f6239  _INT13_ISR                      
 0     003f623e  _INT14_ISR                      
-0     003f6372  _InitExtInterrupt               
-0     003f63fc  _InitGPIOuart                   
-0     003f634b  _InitLEDgpio                    
+0     003f638e  _InitExtInterrupt               
+0     003f63ce  _InitGPIOuart                   
+0     003f6367  _InitLEDgpio                    
 0     003f618a  _InitPeripheralClocks           
-0     003f6466  _InitPieCtrl                    
-0     003f648e  _InitPieVectTable               
+0     003f648c  _InitPieCtrl                    
+0     003f64b4  _InitPieVectTable               
 0     003f613d  _InitPll                        
-0     003f6412  _InitSciFIFO                    
-0     003f6338  _InitStartSystem                
+0     003f63e4  _InitSciFIFO                    
+0     003f6354  _InitStartSystem                
 0     003f6111  _InitSysCtrl                    
-0     003f63ea  _InitUART                       
+0     003f63b2  _InitUART                       
 0     003f61ed  _IntOsc1Sel                     
 0     003f61fd  _IntOsc2Sel                     
 0     003f6252  _NMI_ISR                        
 1     00007060  _NmiIntruptRegs                 
-0     003f632e  _PIE_RESERVED                   
+0     003f634a  _PIE_RESERVED                   
 1     003d7fff  _PartIdRegs                     
 1     00000ce0  _PieCtrlRegs                    
 1     00000d00  _PieVectTable                   
@@ -444,7 +444,7 @@ abs   00000000  _RamfuncsLoadSize
 0     00008000  _RamfuncsLoadStart              
 0     00008000  _RamfuncsRunStart               
 0     003f62fc  _SCIRXINTA_ISR                  
-0     003f6301  _SCITXINTA_ISR                  
+0     003f631d  _SCITXINTA_ISR                  
 0     003f62e8  _SPIRXINTA_ISR                  
 0     003f62ed  _SPITXINTA_ISR                  
 1     00007050  _SciaRegs                       
@@ -453,9 +453,9 @@ abs   00000000  _RamfuncsLoadSize
 1     00007010  _SysCtrlRegs                    
 1     00000985  _SysPwrCtrlRegs                 
 0     003f62b1  _TINT0_ISR                      
-0     003f6419  _UARTsendChar                   
-0     003f6425  _UARTsendData                   
-0     003f6431  _UARTsendString                 
+0     003f63eb  _UARTsendChar                   
+0     003f63f7  _UARTsendData                   
+0     003f6403  _UARTsendString                 
 0     003f6289  _USER10_ISR                     
 0     003f628e  _USER11_ISR                     
 0     003f6293  _USER12_ISR                     
@@ -471,8 +471,8 @@ abs   00000000  _RamfuncsLoadSize
 0     003f62b6  _WAKEINT_ISR                    
 0     003f62a2  _XINT1_ISR                      
 0     003f62a7  _XINT2_ISR                      
-0     003f6324  _XINT3_ISR                      
-0     003f650e  _XInt1_Isr                      
+0     003f6340  _XINT3_ISR                      
+0     003f6534  _XInt1_Isr                      
 1     00007070  _XIntruptRegs                   
 0     003f620f  _XtalOscSel                     
 1     00000350  __STACK_END                     
@@ -485,29 +485,29 @@ abs   ffffffff  ___TI_prof_data_size
 abs   ffffffff  ___TI_prof_data_start           
 abs   ffffffff  ___binit__                      
 abs   ffffffff  ___c_args__                     
-0     003f6543  ___cinit__                      
+0     003f6569  ___cinit__                      
 abs   ffffffff  ___etext__                      
 abs   ffffffff  ___pinit__                      
 abs   ffffffff  ___text__                       
-0     003f64f5  __args_main                     
+0     003f651b  __args_main                     
 1     00008806  __lock                          
-0     003f6537  __nop                           
-0     003f6533  __register_lock                 
-0     003f652f  __register_unlock               
+0     003f655d  __nop                           
+0     003f6559  __register_lock                 
+0     003f6555  __register_unlock               
 1     00000050  __stack                         
-0     003f6542  __system_post_cinit             
-0     003f6540  __system_pre_init               
+0     003f6568  __system_post_cinit             
+0     003f6566  __system_pre_init               
 1     00008808  __unlock                        
-0     003f643d  _abort                          
-0     003f6396  _c_int00                        
-0     003f64b4  _copy_in                        
-0     003f638c  _delay                          
-0     003f643f  _exit                           
-0     003f6521  _main                           
-0     003f64d8  _memcpy                         
-0     003f6333  _rsvd_ISR                       
+0     003f6463  _abort                          
+0     003f640f  _c_int00                        
+0     003f64da  _copy_in                        
+0     003f63a8  _delay                          
+0     003f6465  _exit                           
+0     003f6547  _main                           
+0     003f64fe  _memcpy                         
+0     003f634f  _rsvd_ISR                       
 abs   ffffffff  binit                           
-0     003f6543  cinit                           
+0     003f6569  cinit                           
 0     003f7ff6  code_start                      
 abs   ffffffff  etext                           
 abs   ffffffff  pinit                           
@@ -570,46 +570,46 @@ page  address   name
 0     003f62f2  _I2CINT1A_ISR                   
 0     003f62f7  _I2CINT2A_ISR                   
 0     003f62fc  _SCIRXINTA_ISR                  
-0     003f6301  _SCITXINTA_ISR                  
-0     003f6306  _ADCINT3_ISR                    
-0     003f630b  _ADCINT4_ISR                    
-0     003f6310  _ADCINT5_ISR                    
-0     003f6315  _ADCINT6_ISR                    
-0     003f631a  _ADCINT7_ISR                    
-0     003f631f  _ADCINT8_ISR                    
-0     003f6324  _XINT3_ISR                      
-0     003f6329  _EMPTY_ISR                      
-0     003f632e  _PIE_RESERVED                   
-0     003f6333  _rsvd_ISR                       
-0     003f6338  _InitStartSystem                
-0     003f634b  _InitLEDgpio                    
-0     003f6372  _InitExtInterrupt               
-0     003f638c  _delay                          
-0     003f6396  _c_int00                        
-0     003f63ea  _InitUART                       
-0     003f63fc  _InitGPIOuart                   
-0     003f6412  _InitSciFIFO                    
-0     003f6419  _UARTsendChar                   
-0     003f6425  _UARTsendData                   
-0     003f6431  _UARTsendString                 
-0     003f643d  C$$EXIT                         
-0     003f643d  _abort                          
-0     003f643f  _exit                           
-0     003f6466  _InitPieCtrl                    
-0     003f6485  _EnableInterrupts               
-0     003f648e  _InitPieVectTable               
-0     003f64b4  _copy_in                        
-0     003f64d8  _memcpy                         
-0     003f64f5  __args_main                     
-0     003f650e  _XInt1_Isr                      
-0     003f6521  _main                           
-0     003f652f  __register_unlock               
-0     003f6533  __register_lock                 
-0     003f6537  __nop                           
-0     003f6540  __system_pre_init               
-0     003f6542  __system_post_cinit             
-0     003f6543  ___cinit__                      
-0     003f6543  cinit                           
+0     003f631d  _SCITXINTA_ISR                  
+0     003f6322  _ADCINT3_ISR                    
+0     003f6327  _ADCINT4_ISR                    
+0     003f632c  _ADCINT5_ISR                    
+0     003f6331  _ADCINT6_ISR                    
+0     003f6336  _ADCINT7_ISR                    
+0     003f633b  _ADCINT8_ISR                    
+0     003f6340  _XINT3_ISR                      
+0     003f6345  _EMPTY_ISR                      
+0     003f634a  _PIE_RESERVED                   
+0     003f634f  _rsvd_ISR                       
+0     003f6354  _InitStartSystem                
+0     003f6367  _InitLEDgpio                    
+0     003f638e  _InitExtInterrupt               
+0     003f63a8  _delay                          
+0     003f63b2  _InitUART                       
+0     003f63ce  _InitGPIOuart                   
+0     003f63e4  _InitSciFIFO                    
+0     003f63eb  _UARTsendChar                   
+0     003f63f7  _UARTsendData                   
+0     003f6403  _UARTsendString                 
+0     003f640f  _c_int00                        
+0     003f6463  C$$EXIT                         
+0     003f6463  _abort                          
+0     003f6465  _exit                           
+0     003f648c  _InitPieCtrl                    
+0     003f64ab  _EnableInterrupts               
+0     003f64b4  _InitPieVectTable               
+0     003f64da  _copy_in                        
+0     003f64fe  _memcpy                         
+0     003f651b  __args_main                     
+0     003f6534  _XInt1_Isr                      
+0     003f6547  _main                           
+0     003f6555  __register_unlock               
+0     003f6559  __register_lock                 
+0     003f655d  __nop                           
+0     003f6566  __system_pre_init               
+0     003f6568  __system_post_cinit             
+0     003f6569  ___cinit__                      
+0     003f6569  cinit                           
 0     003f7ff6  code_start                      
 1     00000050  __stack                         
 1     00000350  __STACK_END                     

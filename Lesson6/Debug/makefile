@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/Program Files/TI CCS7/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS
+CG_TOOL_ROOT := C:/Program Files/Texas Instruments/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -153,14 +153,14 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 Lesson6.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/Program Files/TI CCS7/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/bin/cl2000" -v28 -ml -mt --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"Lesson6.map" --stack_size=0x300 --warn_sections -i"C:/Program Files/TI CCS7/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/lib" -i"C:/Program Files/TI CCS7/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="Lesson6_linkInfo.xml" --rom_model -o "Lesson6.out" $(ORDERED_OBJS)
+	"C:/Program Files/Texas Instruments/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/bin/cl2000" -v28 -ml -mt --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"Lesson6.map" --stack_size=0x300 --warn_sections -i"C:/Program Files/Texas Instruments/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/lib" -i"C:/Program Files/Texas Instruments/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="Lesson6_linkInfo.xml" --rom_model -o "Lesson6.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 Lesson6.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/Program Files/TI CCS7/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/bin/hex2000"  -o "Lesson6.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/Program Files/Texas Instruments/ccsv7/tools/compiler/ti-cgt-c2000_16.9.6.LTS/bin/hex2000"  -o "Lesson6.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

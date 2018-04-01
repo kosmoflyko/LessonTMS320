@@ -588,15 +588,15 @@ interrupt void I2CINT2A_ISR(void)     // I2C-A
 // INT9.1
 interrupt void SCIRXINTA_ISR(void)     // SCI-A
 {
-  // Insert ISR Code here
+    // Insert ISR Code here
 
-  // To receive more interrupts from this PIE group, acknowledge this interrupt
-  // PieCtrlRegs.PIEACK.all = PIEACK_GROUP9;
+    // To receive more interrupts from this PIE group, acknowledge this interrupt
+    // PieCtrlRegs.PIEACK.all = PIEACK_GROUP9;
 
-  // Next two lines for debug only to halt the processor here
-  // Remove after inserting ISR Code
-  asm ("      ESTOP0");
-  for(;;);
+    // Next two lines for debug only to halt the processor here
+    // Remove after inserting ISR Code
+    asm ("      ESTOP0");
+    for(;;);
 
 }
 

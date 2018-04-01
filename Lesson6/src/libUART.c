@@ -9,7 +9,9 @@ void InitUART (void) {
 
     SciaRegs.SCICCR.all  = 0x0007;                  // Stop bit = 1, size = 8 bit
     SciaRegs.SCICTL1.all = 0x0003;                  // TX and RX enable
-    SciaRegs.SCICTL2.all = 0x0003;                  // Interrupts enable
+
+    SciaRegs.SCICTL2.bit.TXINTENA = 1;              // TX interrupt enable
+    SciaRegs.SCICTL2.bit.RXBKINTENA = 1;            // RX interrupt enable
 
     SciaRegs.SCIHBAUD = 0x0000;
     SciaRegs.SCILBAUD = 0x0006;                     // Baud 256 000
@@ -24,7 +26,7 @@ void InitGPIOuart (void) {
 
 /********* SCIRXDA - GPIO28 ************/
 
-    GpioCtrlRegs.GPAQSEL2.bit.GPIO28 = 3;           // async input
+    GpioCtrlRegs.GPAQSEL2.bit.GPIO28 = 3;           // Async input
     GpioCtrlRegs.GPAMUX2.bit.GPIO28 = 1;            // GPIO28 --> SCIRXDA
 
 /********* SCITXDA - GPIO29 ************/
@@ -65,6 +67,7 @@ void UARTsendString (char *str) {
         UARTsendChar (*str++);
     }
 }
+
 
 
 
