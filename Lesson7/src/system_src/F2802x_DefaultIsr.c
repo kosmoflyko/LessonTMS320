@@ -601,8 +601,8 @@ interrupt void SCIRXINTA_ISR(void)     // SCI-A
         GpioDataRegs.GPASET.bit.GPIO0 = 1;
     }
 
-    SciaRegs.SCIFFRX.bit.RXFFOVRCLR=1;   // Clear Overflow flag
-    SciaRegs.SCIFFRX.bit.RXFFINTCLR=1;   // Clear Interrupt flag
+    SciaRegs.SCIFFRX.bit.RXFFOVRCLR = 1;   // Clear Overflow flag
+    SciaRegs.SCIFFRX.bit.RXFFINTCLR = 1;   // Clear Interrupt flag
 
     PieCtrlRegs.PIEACK.all = PIEACK_GROUP9;         // To receive more interrupts from this PIE group, acknowledge this interrupt
 
